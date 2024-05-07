@@ -13,6 +13,7 @@ import umc.spring.domain.common.BaseEntity;
 @AllArgsConstructor
 public class MemberMission extends BaseEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)

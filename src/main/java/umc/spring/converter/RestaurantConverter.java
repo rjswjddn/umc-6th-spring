@@ -1,6 +1,7 @@
 package umc.spring.converter;
 
 import umc.spring.domain.Restaurant;
+import umc.spring.domain.RestaurantCategory;
 import umc.spring.web.dto.RestaurantRequest;
 import umc.spring.web.dto.RestaurantResponse;
 

@@ -16,7 +16,6 @@ public class RestaurantServiceImpl implements RestaurantService{
 
     @Override
     public RestaurantResponse.RestaurantAddResultDTO addRestaurant(RestaurantRequest.RestaurantAddDTO restaurantAddDTO) {
-        Restaurant restaurant = restaurantRepository.save(RestaurantConverter.toRestaurant(restaurantAddDTO));
-        return RestaurantConverter.toRestaurantAddResultDTO(restaurant);
+        return RestaurantConverter.toRestaurantAddResultDTO(restaurantRepository.save(RestaurantConverter.toRestaurant(restaurantAddDTO)));
     }
 }
