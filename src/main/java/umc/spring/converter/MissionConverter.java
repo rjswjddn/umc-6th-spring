@@ -1,11 +1,8 @@
 package umc.spring.converter;
 
 import umc.spring.domain.Mission;
-import umc.spring.domain.Restaurant;
 import umc.spring.web.dto.MissionRequest;
 import umc.spring.web.dto.MissionResponse;
-import umc.spring.web.dto.RestaurantRequest;
-import umc.spring.web.dto.RestaurantResponse;
 
 public class MissionConverter {
     public static Mission toMission(MissionRequest.MissionAddDTO missionAddDTO) {
