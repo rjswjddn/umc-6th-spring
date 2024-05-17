@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Restaurant {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
