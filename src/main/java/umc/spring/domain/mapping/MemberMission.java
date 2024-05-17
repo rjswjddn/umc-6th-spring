@@ -26,4 +26,7 @@ public class MemberMission extends BaseEntity {
 
     private Boolean complete;
 
+    public void completeMemberMission() {
+        this.complete = true;
+    }
 }

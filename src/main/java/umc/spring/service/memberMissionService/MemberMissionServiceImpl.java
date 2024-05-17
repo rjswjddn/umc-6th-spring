@@ -36,5 +36,16 @@ public class MemberMissionServiceImpl implements MemberMissionService{
         Page<MemberMission> memberMission = memberMissionRepository.findAllByMember(member, PageRequest.of(page - 1, 10));
         return memberMission;
     }
+
+    @Override
+    public MemberMissionResponse.MemberMissionCompleteResultDTO completeMemberMission(MemberMissionRequest.MemberMissionCompleteDTO memberMissionCompleteDTO) {
+
+        MemberMission memberMission = memberMissionRepository.findById(memberMissionCompleteDTO.getMemberMissionId()).get();
+        memberMission.completeMemberMission();
+        memberMissionRepository.save(memberMission);
+        return MemberMissionResponse.MemberMissionCompleteResultDTO.builder()
+                .MemberMissionId(memberMission.getId())
+                .build();
+    }
 }
 

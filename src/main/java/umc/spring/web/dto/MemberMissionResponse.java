@@ -21,6 +21,14 @@ public class MemberMissionResponse {
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
+    public static class MemberMissionCompleteResultDTO {
+        Long MemberMissionId;
+    }
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
     public static class MemberMissionResponseDTO{
         String restaurantName;
         Long point;
