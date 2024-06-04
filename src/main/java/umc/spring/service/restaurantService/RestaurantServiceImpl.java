@@ -8,6 +8,8 @@ import umc.spring.repository.RestaurantRepository;
 import umc.spring.web.dto.RestaurantRequest;
 import umc.spring.web.dto.RestaurantResponse;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class RestaurantServiceImpl implements RestaurantService{
@@ -17,5 +19,10 @@ public class RestaurantServiceImpl implements RestaurantService{
     @Override
     public RestaurantResponse.RestaurantAddResultDTO addRestaurant(RestaurantRequest.RestaurantAddDTO restaurantAddDTO) {
         return RestaurantConverter.toRestaurantAddResultDTO(restaurantRepository.save(RestaurantConverter.toRestaurant(restaurantAddDTO)));
+    }
+
+    @Override
+    public Optional<Restaurant> findRestaurant(Long restaurantId) {
+        return restaurantRepository.findById(restaurantId);
     }
 }

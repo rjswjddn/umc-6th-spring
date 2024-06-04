@@ -12,4 +12,11 @@ public class MemberMissionRequest {
         Long missionId;
 
     }
+
+    @Getter
+    public static class MemberMissionCompleteDTO {
+
+        @ExistMemberMission
+        Long MemberMissionId;
+    }
 }
